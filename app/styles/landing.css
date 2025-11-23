@@ -1,0 +1,70 @@
+.landing-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4e8cff, #6ec5ff);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+}
+
+.landing-hero {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 90px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 1.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button.primary {
+    background: white;
+    color: #0070f3;
+}
+
+button.primary:hover {
+    background: #e6e6e6;
+}
+
+button.secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
