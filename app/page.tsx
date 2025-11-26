@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 text-white">
       <header className="max-w-6xl mx-auto flex items-center justify-between p-6">
         <div className="flex items-center gap-3">
-          <img src="/images/logo.jpg" alt="Teachly" className="w-12 h-12 rounded-md object-cover" />
+          <img src="/images/Logo.jpg" alt="Teachly" className="w-12 h-12 rounded-md object-cover" />
           <div>
             <h1 className="text-2xl font-extrabold tracking-tight">Teachly</h1>
             <p className="text-xs opacity-80">Plataforma de estudios · Ingeniería de Sistemas</p>
