@@ -62,3 +62,65 @@ body {
   50% { transform: translateY(-25px) rotate(10deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
+
+/* 🔵 ICONOS FLOTANTES */
+.floating-icons img {
+    position: absolute;
+    width: 55px;
+    opacity: 0.45;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+    animation: float 6s ease-in-out infinite;
+}
+
+.i1 { top: 10%; left: 5%; animation-duration: 7s; }
+.i2 { top: 20%; right: 10%; animation-duration: 8s; }
+.i3 { top: 50%; left: 15%; animation-duration: 6s; }
+.i4 { top: 70%; right: 20%; animation-duration: 7s; }
+.i5 { bottom: 10%; left: 30%; animation-duration: 9s; }
+.i6 { top: 30%; right: 35%; animation-duration: 10s; }
+.i7 { bottom: 20%; right: 15%; animation-duration: 8s; }
+.i8 { top: 60%; left: 5%; animation-duration: 7s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ✨ FADE IN GENERAL */
+.fade-in {
+    animation: fadeIn .9s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 🟣 TARJETAS 3D HOVER */
+.card-3d {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card-3d:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.15);
+}
+
+/* ✨ BOTONES ANIMADOS */
+.btn-anim {
+    transition: all .25s ease;
+}
+
+.btn-anim:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 14px rgba(99,102,241,0.4);
+}
+
+/* 🌫 GLASSMORPHISM */
+.glass {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.3);
+}

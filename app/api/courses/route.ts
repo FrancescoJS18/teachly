@@ -1,21 +1,28 @@
+import { NextResponse } from "next/server";
 import connectToDatabase from "@/lib/mongodb";
 import Course from "@/models/Course";
-import { NextResponse } from "next/server";
 
 // GET /api/courses
 export async function GET() {
-    await connectToDatabase();
-    const courses = await Course.find();
-    return NextResponse.json(courses);
+    try {
+        await connectToDatabase();
+        const courses = await Course.find();
+        return NextResponse.json(courses);
+    } catch (error) {
+        console.error("Error al obtener cursos:", error);
+        return NextResponse.json({ error: "Error interno del servidor" }, { status: 500 });
+    }
 }
 
 // POST /api/courses
 export async function POST(req: Request) {
-    await connectToDatabase();
-    const body = await req.json();
-    const course = await Course.create(body);
-    return NextResponse.json(course, { status: 201 });
+    try {
+        await connectToDatabase();
+        const body = await req.json();
+        const course = await Course.create(body);
+        return NextResponse.json(course, { status: 201 });
+    } catch (error) {
+        console.error("Error al crear curso:", error);
+        return NextResponse.json({ error: "Error interno del servidor" }, { status: 500 });
+    }
 }
-
-
-
